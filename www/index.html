@@ -24,9 +24,8 @@
     }
 
     function searchName(){
-        let NameSearchClass = ncmb.DataStore(db);
-        //let name = "キングス・ナイト";
         let name = $("#name").val();
+        let NameSearchClass = ncmb.DataStore(db);
         NameSearchClass.equalTo("name",name).fetchAll().then(function(results){
             showResults(results);
         })
